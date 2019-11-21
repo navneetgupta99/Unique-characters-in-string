@@ -1,0 +1,32 @@
+
+# Python program to illustrate string 
+# with unique characters using  
+# boolean list and updating based on ascii value
+  
+def uniqueCharacters(str): 
+    boole =  [False for i in range(255)] 
+    
+      
+  
+    for j in range(len(str)): 
+        if (boole[int(ord(str[j]))] == True):
+        
+            return False
+        boole[int(ord(str[j]))]=True
+            
+  
+    # If no duplicate characters  
+    # encountered, return true 
+    return True;
+    
+  
+  
+
+str = "TechT"; 
+  
+if(uniqueCharacters(str)): 
+    print("The String ", str," has all unique characters"); 
+else: 
+    print("The String ", str, " has duplicate characters"); 
+  
+
