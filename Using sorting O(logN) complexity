@@ -1,0 +1,27 @@
+# Python program to illustrate string 
+# with unique characters using  
+# ascii value cpomparison and sorting
+  
+def uniqueCharacters(str): 
+    str=sorted(str)
+      
+  
+    for i in range(len(str)-1): 
+        
+        if(str[i] == str[(i+1)]): 
+            return False; 
+  
+    # If no duplicate characters  
+    # encountered, return true 
+    return True;
+    
+  
+  
+
+str = "TechT"; 
+  
+if(uniqueCharacters(str)): 
+    print("The String ", str," has all unique characters"); 
+else: 
+    print("The String ", str, " has duplicate characters"); 
+  
